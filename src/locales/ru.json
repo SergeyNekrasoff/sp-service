@@ -1,0 +1,21 @@
+{
+  "header": {
+    "logo": "SuperPuper Service"
+  },
+  "nav": {
+    "home": "Главная",
+    "pricing": "Цены",
+    "tos": "Условия использования"
+  },
+  "hero": {
+    "welcome": "Создайте нечто удивительное",
+    "orderAction": "Заказать сейчас",
+    "offerAction": "Деплойте веб-сайты, SEO-оптимизированные описания продуктов на рынке в x10 быстрее."
+  },
+  "pricing": {
+    "order": "Заказать"
+  },
+  "success": {
+    "message": "Account created successfully! Please check your inbox."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "header": {
+    "logo": "SuperPuper Service"
+  },
+  "nav": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "tos": "Terms of use"
+  },
+  "hero": {
+    "welcome": "Create Something Amazing",
+    "orderAction": "Order Now",
+    "offerAction": "Deploy web-sites, SEO-optimized product descriptions to market 10x faster."
+  },
+  "pricing": {
+    "order": "Order"
+  },
+  "success": {
+    "message": "Account created successfully! Please check your inbox."
+  }
+}

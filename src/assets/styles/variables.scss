@@ -1,0 +1,117 @@
+/**
+ * Colors Base
+ *
+ * These are the pure base color presets. Most of the time, you should not be
+ * using these colors directly in the theme but rather use "Colors Theme"
+ * instead because those are "Theme (light or dark)" dependant.
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f9f9f9;
+  --vt-c-white-mute: #f1f1f1;
+
+  --vt-c-black: #1a1a1a;
+  --vt-c-black-pure: #000000;
+  --vt-c-black-soft: #242424;
+  --vt-c-black-mute: #2f2f2f;
+  --vt-c-black-flash: #0d0d0d;
+
+  --vt-c-green: #42b883;
+  --vt-c-green-light: #42d392;
+  --vt-c-green-lighter: #35eb9a;
+  --vt-c-green-dark: #33a06f;
+  --vt-c-green-darker: #155f3e;
+
+  --vt-c-blue: #3b8eed;
+  --vt-c-blue-light: #549ced;
+  --vt-c-blue-lighter: #50a2ff;
+  --vt-c-blue-dark: #3468a3;
+  --vt-c-blue-darker: #255489;
+
+  --vt-c-indigo: #213547;
+  --vt-c-indigo-soft: #476582;
+  --vt-c-indigo-light: #aac8e4;
+
+  --vt-c-purple: #de41e0;
+  --vt-c-purple-light: #e936eb;
+  --vt-c-purple-lighter: #f616f8;
+  --vt-c-purple-dark: #823c83;
+  --vt-c-purple-darker: #602960;
+}
+
+/**
+     * Colors Theme
+     * -------------------------------------------------------------------------- */
+
+:root {
+  --vt-c-bg: var(--vt-c-white);
+  --vt-c-bg-soft: var(--vt-c-white-soft);
+  --vt-c-bg-mute: var(--vt-c-white-mute);
+}
+
+.dark {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f9f9f9;
+  --vt-c-white-mute: #f1f1f1;
+
+  --vt-c-black: #1a1a1a;
+  --vt-c-black-pure: #000000;
+  --vt-c-black-soft: #242424;
+  --vt-c-black-mute: #2f2f2f;
+  --vt-c-black-flash: #0d0d0d;
+
+  --vt-c-green: #42b883;
+  --vt-c-green-light: #42d392;
+  --vt-c-green-lighter: #35eb9a;
+  --vt-c-green-dark: #33a06f;
+  --vt-c-green-darker: #155f3e;
+
+  --vt-c-blue: #3b8eed;
+  --vt-c-blue-light: #549ced;
+  --vt-c-blue-lighter: #50a2ff;
+  --vt-c-blue-dark: #3468a3;
+  --vt-c-blue-darker: #255489;
+
+  --vt-c-indigo: #213547;
+  --vt-c-indigo-soft: #476582;
+  --vt-c-indigo-light: #aac8e4;
+
+  --vt-c-purple: #de41e0;
+  --vt-c-purple-light: #e936eb;
+  --vt-c-purple-lighter: #f616f8;
+  --vt-c-purple-dark: #823c83;
+  --vt-c-purple-darker: #602960;
+}
+
+/**
+     * Typography
+     * -------------------------------------------------------------------------- */
+
+:root {
+  --vt-font-family-base:
+    'Nunito Sans', 'Inter var experimental', 'Inter var', Inter, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  --vt-font-family-mono: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/**
+     * Shadows
+     * -------------------------------------------------------------------------- */
+
+:root {
+  --vt-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --vt-shadow-2: 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07);
+  --vt-shadow-3: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
+  --vt-shadow-4: 0 14px 44px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.12);
+  --vt-shadow-5: 0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+/**
+     * Magic Numbers
+     * -------------------------------------------------------------------------- */
+
+:root {
+  --vt-nav-height: 55px;
+}

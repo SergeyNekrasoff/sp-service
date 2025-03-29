@@ -1,0 +1,29 @@
+{
+  "plans": [
+    {
+      "id": 1,
+      "title": "Free Plan",
+      "price": "Free",
+      "description": "Perfect for getting started",
+      "features": ["10 Super Puppers", "Basic Features", "Email Support"]
+    },
+    {
+      "id": 2,
+      "title": "Basic Plan",
+      "price": "100 €/month",
+      "description": "Ideal for small teams",
+      "features": ["100 Super Puppers", "All Free features", "Priority Support"]
+    },
+    {
+      "id": 3,
+      "title": "Advanced Plan",
+      "price": "500 €/month",
+      "description": "Enterprise solution",
+      "features": [
+        "500 Super Puppers",
+        "All Basic features",
+        "Every additional 100 super-duper for a separate price"
+      ]
+    }
+  ]
+}
