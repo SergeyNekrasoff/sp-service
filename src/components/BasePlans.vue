@@ -20,7 +20,7 @@ onMounted(async () => {
   >
     <div v-if="loading">Loading...</div>
     <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <CardOrder v-for="item in plans" :key="item.id" :item="item" :selected-id="plan?.id" />
+      <CardOrder v-for="item in plans" :key="item.id" :item="item" :selected="plan?.id" />
     </div>
   </section>
 </template>

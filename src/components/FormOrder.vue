@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { computed, reactive, ref, watch } from 'vue'
+import { storeToRefs } from 'pinia'
 import BaseFormInput from '@/components/base/BaseFormInput.vue'
-import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { useCheckoutStore } from '@/stores/checkout'
 
 interface IError {
   username: string
@@ -10,9 +11,11 @@ interface IError {
   password: string
 }
 
-const { t, locale } = useI18n()
+const { t } = useI18n()
 
-const router = useRouter()
+const apiCheckoutStore = useCheckoutStore()
+const { createAccount } = useCheckoutStore()
+const { loading } = storeToRefs(apiCheckoutStore)
 
 const username = ref<string>('')
 const email = ref<string>('')
@@ -51,8 +54,12 @@ const isValid = computed(() => {
   return username.value || email.value || password.value
 })
 
-const submit = () => {
-  router.push(`/${locale.value}/success`)
+const submit = async () => {
+  await createAccount({
+    username: username.value,
+    email: email.value,
+    password: password.value,
+  })
 }
 </script>
 
@@ -88,7 +95,10 @@ const submit = () => {
         "
         :disabled="!isValid"
       >
-        {{ t('order.createAccount') }}
+        <template v-if="loading"> Loading... </template>
+        <template v-else>
+          {{ t('order.createAccount') }}
+        </template>
       </button>
     </form>
   </div>

@@ -41,6 +41,8 @@ export const usePlansStore = defineStore('plans', () => {
     }
   }
 
+  const setPlan = (value: Plan) => (plan.value = { ...value })
+
   watch(locale, async (value) => {
     if (value) {
       await getPlans()
@@ -53,5 +55,6 @@ export const usePlansStore = defineStore('plans', () => {
     plan,
     getPlans,
     getPlan,
+    setPlan,
   }
 })

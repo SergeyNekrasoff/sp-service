@@ -1,20 +1,34 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import CardOrder from '@/components/CardOrder.vue'
 import FormOrder from '@/components/FormOrder.vue'
 import { usePlansStore } from '@/stores/plans'
 import { storeToRefs } from 'pinia'
 import { useRoute } from 'vue-router'
+import type { Plan } from '@/types/plans'
 
 const apiPlansStore = usePlansStore()
-const { getPlans } = usePlansStore()
-const { plans } = storeToRefs(apiPlansStore)
+const { getPlan, getPlans } = usePlansStore()
+const { plan, plans } = storeToRefs(apiPlansStore)
 
 const route = useRoute()
-const selectedId = route.params.id
+const selectedId = ref<string | number | string[]>(route.params.id)
+
+watch(
+  plan,
+  async (value: unknown) => {
+    if (!value) return
+    selectedId.value = (value as Plan).id
+  },
+  {
+    immediate: true,
+    deep: true,
+  },
+)
 
 onMounted(async () => {
   await getPlans()
+  await getPlan(route.params.id as string)
 })
 </script>
 
@@ -25,7 +39,7 @@ onMounted(async () => {
         v-for="item in plans"
         :key="item.id"
         :item="item"
-        :selected-id="selectedId"
+        :selected="selectedId"
         :is-order="true"
       />
     </div>
