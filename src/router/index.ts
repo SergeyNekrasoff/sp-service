@@ -21,6 +21,12 @@ const router = createRouter({
       component: () => import('@/views/OrderView.vue'),
       meta: { inheritLang: true, layout: 'default' },
     },
+    {
+      path: '/:lang(en|ru)?/success',
+      name: 'success',
+      component: () => import('@/views/SuccessView.vue'),
+      meta: { inheritLang: true, layout: 'empty' },
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {

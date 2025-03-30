@@ -68,9 +68,6 @@ onMounted(() => {
 
   selectedLocale.value = currentLocale
 })
-
-// /src/markdown/ru/tos.md
-// /ru/src/markdown/en/tos.md
 </script>
 
 <style lang="scss">

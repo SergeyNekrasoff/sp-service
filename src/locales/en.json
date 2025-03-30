@@ -4,6 +4,7 @@
   },
   "nav": {
     "home": "Home",
+    "homeLink": "Go to Home",
     "pricing": "Pricing",
     "tos": "Terms of use"
   },
@@ -15,7 +16,17 @@
   "pricing": {
     "order": "Order"
   },
+  "plan": {
+    "selected": "Selected"
+  },
+  "order": {
+    "createAccount": "Submit",
+    "title": "Create account for subscription"
+  },
   "success": {
     "message": "Account created successfully! Please check your inbox."
+  },
+  "error": {
+    "required": "{ field } is required"
   }
 }

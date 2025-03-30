@@ -4,6 +4,7 @@
   },
   "nav": {
     "home": "Главная",
+    "homeLink": "На главную",
     "pricing": "Цены",
     "tos": "Условия использования"
   },
@@ -15,7 +16,17 @@
   "pricing": {
     "order": "Заказать"
   },
+  "plan": {
+    "selected": "Выбрано"
+  },
+  "order": {
+    "createAccount": "Создать",
+    "title": "Создайте аккаунт для подписки"
+  },
   "success": {
-    "message": "Account created successfully! Please check your inbox."
+    "message": "Аккаунт создан успешно! Пожалуйста, проверьте свой почтовый ящик."
+  },
+  "error": {
+    "required": "{ field } является обязательным"
   }
 }

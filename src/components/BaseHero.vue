@@ -26,13 +26,15 @@ const { t } = useI18n()
     />
     <div class="mx-auto mt-4 w-[90%] max-w-[1280px] flex flex-col justify-center px-6 py-8">
       <div class="absolute top-[230px]">
-        <h1 class="text-[72px] font-bold text-black_mute mb-12">{{ t('hero.welcome') }}</h1>
+        <h1 class="text-[72px] font-bold text-black_mute mb-12">
+          {{ t('hero.welcome') }}
+        </h1>
         <p class="text-[24px] p-4 mb-12">
           {{ t('hero.offerAction') }}
         </p>
         <router-link
           to="#plans"
-          class="uppercase flex items-center justify-center w-[220px] font-[600] p-3 bg-purple text-white_soft text-lg m-4 mt-12 hover:bg-purple_lighter duration-100 ease-in"
+          class="uppercase flex items-center justify-center w-[220px] font-[600] p-3 bg-blue text-white_soft text-lg m-4 mt-12 hover:bg-blue_lighter duration-100 ease-in"
         >
           {{ t('hero.orderAction') }}
         </router-link>

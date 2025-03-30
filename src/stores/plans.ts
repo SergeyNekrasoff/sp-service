@@ -3,13 +3,12 @@ import { ref, watch } from 'vue'
 import type { Ref } from 'vue'
 import type { AxiosError } from 'axios'
 import { useI18n } from 'vue-i18n'
-import { HttpClient } from '@/api/httpClient'
 import type { Plan } from '@/types/plans'
-
-const httpClient = new HttpClient()
+import { PlansService } from '@/services/plans'
 
 export const usePlansStore = defineStore('plans', () => {
   const plans: Ref<Plan[] | null> = ref(null)
+  const plan: Ref<Plan | null> = ref(null)
   const loading: Ref<boolean> = ref(false)
 
   const { locale } = useI18n()
@@ -17,11 +16,23 @@ export const usePlansStore = defineStore('plans', () => {
   const getPlans = async () => {
     try {
       loading.value = true
-      const response = await httpClient.get(`/v1/${locale.value}/plans/`)
+      const response = await PlansService.getAll(locale.value)
 
-      if (!response) return
+      plans.value = response?.data.plans as Plan[]
 
-      plans.value = response.data.plans as Plan[]
+      loading.value = false
+    } catch (error) {
+      loading.value = false
+      return (error as AxiosError).response
+    }
+  }
+
+  const getPlan = async (id: string) => {
+    try {
+      loading.value = true
+      const response = await PlansService.findOne(id, locale.value)
+
+      plan.value = response?.data as Plan
 
       loading.value = false
     } catch (error) {
@@ -39,6 +50,8 @@ export const usePlansStore = defineStore('plans', () => {
   return {
     loading,
     plans,
+    plan,
     getPlans,
+    getPlan,
   }
 })
