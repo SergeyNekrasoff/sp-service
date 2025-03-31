@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue'
 import CardOrder from '@/components/CardOrder.vue'
+import PaymentCard from '@/components/PaymentCard.vue'
 import FormOrder from '@/components/FormOrder.vue'
 import { usePlansStore } from '@/stores/plans'
 import { storeToRefs } from 'pinia'
@@ -44,8 +45,9 @@ onMounted(async () => {
       />
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-16">
-      <FormOrder class="w-4/12 mx-auto" />
+    <div class="flex items-start justify-center gap-10 mt-20">
+      <FormOrder class="w-4/12" />
+      <PaymentCard class="w-4/12" />
     </div>
   </div>
 </template>

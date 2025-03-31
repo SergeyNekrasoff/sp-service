@@ -9,9 +9,9 @@
     "tos": "Terms of use"
   },
   "hero": {
-    "welcome": "Create Something Amazing",
+    "welcome": "Welcome to SuperPuper Service",
     "orderAction": "Order Now",
-    "offerAction": "Deploy web-sites, SEO-optimized product descriptions to market 10x faster."
+    "offerAction": "We specialize in providing VPS/VDS - in 42 countries at the moment.\n Check out our rates, we are sure you will like them. If you have any questions,\n contact the online chat in the lower right corner, it is available 24/7."
   },
   "pricing": {
     "order": "Order"
@@ -23,10 +23,16 @@
     "createAccount": "Submit",
     "title": "Create account for subscription"
   },
+  "payment": {
+    "name": "Payment Card"
+  },
   "success": {
     "message": "Account created successfully! Please check your inbox."
   },
   "error": {
-    "required": "{ field } is required"
+    "required": "{ field } is required",
+    "card": "Invalid card number",
+    "expiryDate": "Invalid expiry date",
+    "cvc": "Invalid CVC"
   }
 }

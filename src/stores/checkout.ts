@@ -1,8 +1,8 @@
-import { defineStore } from 'pinia'
+import { defineStore, storeToRefs } from 'pinia'
 import { ref } from 'vue'
 import type { Ref } from 'vue'
 import type { AxiosError } from 'axios'
-import type { Account } from '@/types/checkout'
+import type { AccountUserData } from '@/types/checkout'
 import { useRouter } from 'vue-router'
 import { CheckoutService } from '@/services/checkout'
 import { useI18n } from 'vue-i18n'
@@ -14,7 +14,7 @@ export const useCheckoutStore = defineStore('checkout', () => {
   const { locale } = useI18n()
   const router = useRouter()
 
-  const createAccount = async (payload: Account): Promise<void | unknown> => {
+  const createAccount = async (payload: AccountUserData): Promise<void | unknown> => {
     try {
       loading.value = true
       const message = await CheckoutService.create({ locale: locale.value, userData: payload })

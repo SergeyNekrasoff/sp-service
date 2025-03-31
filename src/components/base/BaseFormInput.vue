@@ -119,7 +119,7 @@ const getValue = (event: Event) => {
   }
 
   &__field {
-    @apply w-full text-black_mute font-[400] py-2 px-3 border border-solid border-black_soft overflow-hidden;
+    @apply rounded-md w-full text-black_mute font-[400] py-2 px-3 border border-solid border-black_soft overflow-hidden;
 
     &--no-border,
     &--no-border:hover,

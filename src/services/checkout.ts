@@ -1,12 +1,12 @@
 import { HttpClient } from '@/api/httpClient'
-import type { Account } from '@/types/checkout'
+import type { AccountUserData } from '@/types/checkout'
 import type { AxiosError } from 'axios'
 
 const httpClient = new HttpClient()
 
 type AccountRequest = {
   locale: string
-  userData: Account
+  userData: AccountUserData
 }
 
 export const CheckoutService = {
